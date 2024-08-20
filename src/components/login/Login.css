@@ -1,0 +1,174 @@
+/* Importar la fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    position: relative;
+    width: 420px;
+    background: rgba(255, 255, 255, 0.573);
+    border: 2px solid rgb(0, 0, 0);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    color: #050505;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: height 0.2s ease;
+}
+
+.wrapper.active {
+    height: 930px; 
+    margin-bottom: 40px;
+}
+
+.form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.form-box.login {
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+    transform: translateX(-100%);
+}
+
+.form-box.register {
+    position: absolute;
+    top: 0;
+    transition: transform 0.18s ease;
+    transform: translateX(100%);
+}
+
+.wrapper.active .form-box.register {
+    transform: translateX(0);
+}
+
+form h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #000000;
+    padding: 0 45px 0 20px;
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */
+}
+
+.input-box input::placeholder {
+    color: #000000;
+}
+
+.input-box select {
+    -webkit-appearance: none; /* Elimina el estilo predeterminado en Chrome y Safari */
+    -moz-appearance: none; /* Elimina el estilo predeterminado en Firefox */
+    appearance: none; /* Elimina el estilo predeterminado en otros navegadores */
+    background-color: #f6f6f6; /* Ajusta el color de fondo para que sea consistente con el diseño */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 6"><path d="M4 0l4 4H0L4 0z" fill="%23fff"/></svg>'); /* Flecha de selección blanca */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Posición de la flecha */
+    background-size: 12px auto; /* Tamaño de la flecha */
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+    accent-color: #ffffff;
+    margin-right: 4px;
+}
+
+.remember-forgot a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    width: 100%;
+    height: 45px;
+    background: #005eb0; /* Color gris plomo */
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffffff; /* Texto blanco */
+    font-weight: 700;
+    text-align: center; /* Centra el texto horizontalmente */
+    display: flex; /* Usa Flexbox para alinear el contenido */
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+    text-decoration: none; /* Elimina el subrayado */
+    transition: background-color 0.3s ease; /* Transición para el efecto hover */
+}
+
+.button:hover {
+    background-color: #17c5348a; /* Gris más oscuro para el hover */
+}
+
+.button:active {
+    background-color: #ec0000; /* Gris aún más oscuro para cuando se presiona */
+}
+
+.register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: #07c300;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
